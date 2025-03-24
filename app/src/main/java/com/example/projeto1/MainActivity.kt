@@ -15,7 +15,6 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-
         val lblCalculo = findViewById<TextView>(R.id.lblCalculo)
         val edtPeso = findViewById<EditText>(R.id.edtPeso)
         val edtAltura = findViewById<EditText>(R.id.edtAltura)
@@ -40,7 +39,7 @@ class MainActivity : AppCompatActivity() {
                 } else if (((imc ?: 0.0) >= 35) && ((imc ?: 0.0) <= 39.9)) {
                     lblCalculo.text = "IMC: "+ imcFormatado +"\nObesidade II"
                 } else if ((imc ?: 0.0) >= 40) {
-                    lblCalculo.text = "IMC: Obesidade III"
+                    lblCalculo.text = "IMC: "+ imcFormatado +"\nObesidade III"
                 } else {
                     lblCalculo.text = "Coloque Valores acima de 0"
                 }
